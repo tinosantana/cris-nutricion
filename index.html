@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cristina Rodríguez · Dietista-Nutricionista en Gran Canaria</title>
+  <meta name="description" content="Cristina Rodríguez, dietista-nutricionista, docente e investigadora en Gran Canaria. Proyectos de investigación, publicaciones y colaboraciones.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Cristina Rodríguez · Nutrición en Gran Canaria">
+  <meta property="og:description" content="Dietista-nutricionista, docente e investigadora en Gran Canaria.">
+  <meta name="theme-color" content="#143a40">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f7f6;
+      --surface: #ffffff;
+      --ink: #143a40;
+      --muted: #55696c;
+      --line: #d9e3e1;
+      --accent: #2f7f79;
+      --foam: #a9d6cf;
+      --serif: "Newsreader", Georgia, "Times New Roman", serif;
+      --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --max: 1080px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(var(--max), 100% - 3rem); margin-inline: auto; }
+    .skip { position: absolute; left: -999px; top: 0; background: var(--ink); color: #fff; padding: .6rem 1rem; z-index: 10; }
+    .skip:focus { left: 1rem; top: 1rem; }
+
+    /* Cabecera */
+    header { padding-block: 1.6rem; }
+    header .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .brand { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; text-decoration: none; letter-spacing: .01em; }
+    nav { display: flex; gap: 1.75rem; font-size: .95rem; }
+    nav a { text-decoration: none; color: var(--muted); padding-block: .25rem; border-bottom: 1px solid transparent; transition: color .2s, border-color .2s; }
+    nav a:hover { color: var(--ink); border-color: var(--foam); }
+
+    /* Portada */
+    .hero { padding-block: clamp(2.5rem, 7vw, 6rem) clamp(3rem, 8vw, 7rem); }
+    .hero .wrap { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+    .role { margin: 0 0 1.25rem; color: var(--accent); font-weight: 500; font-size: .98rem; }
+    h1 {
+      font-family: var(--serif); font-weight: 400; margin: 0 0 1.5rem;
+      font-size: clamp(2.6rem, 6.4vw, 4.75rem); line-height: 1.04; letter-spacing: -.02em;
+      text-wrap: balance;
+    }
+    .wave { display: block; width: 130px; height: 18px; margin: 0 0 1.75rem; color: var(--foam); }
+    .lead { max-width: 34rem; color: var(--muted); font-size: 1.15rem; margin: 0 0 2rem; }
+    .btn {
+      display: inline-block; background: var(--ink); color: #fff; text-decoration: none;
+      padding: .85rem 1.5rem; border-radius: 999px; font-weight: 500; font-size: .98rem;
+      transition: background .2s;
+    }
+    .btn:hover { background: var(--accent); }
+    .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--ink); margin-left: .5rem; }
+    .btn.ghost:hover { background: var(--ink); color: #fff; }
+
+    .photo {
+      aspect-ratio: 4 / 5; border-radius: 999px 999px 1.25rem 1.25rem; overflow: hidden;
+      background: linear-gradient(160deg, var(--foam), #dcebe8);
+      justify-self: end; width: min(100%, 400px);
+    }
+    .photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+
+    /* Secciones */
+    section { padding-block: clamp(3rem, 7vw, 5.5rem); }
+    .band { background: var(--surface); border-block: 1px solid var(--line); }
+    h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.9rem, 4vw, 2.6rem); line-height: 1.15; margin: 0 0 1.25rem; letter-spacing: -.01em; }
+    .about { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(1.5rem, 5vw, 5rem); }
+    .about p { margin: 0 0 1rem; max-width: 38rem; }
+    .about p:last-child { margin: 0; }
+
+    .areas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-top: 2.5rem; }
+    .area { border-top: 2px solid var(--ink); padding-top: 1.1rem; }
+    .area h3 { font-family: var(--serif); font-weight: 500; font-size: 1.4rem; margin: 0 0 .5rem; }
+    .area p { margin: 0 0 .9rem; color: var(--muted); font-size: 1rem; }
+    .soon { font-size: .88rem; color: var(--accent); font-weight: 500; }
+
+    .contact { text-align: left; }
+    .contact p { max-width: 34rem; color: var(--muted); margin: 0 0 1.75rem; }
+    .mail { font-family: var(--serif); font-size: clamp(1.4rem, 4vw, 2.2rem); text-decoration: none; border-bottom: 2px solid var(--foam); word-break: break-word; transition: border-color .2s; }
+    .mail:hover { border-color: var(--accent); }
+    .social { margin-top: 1.5rem; }
+    .social a { color: var(--muted); text-underline-offset: 4px; }
+    .social a:hover { color: var(--ink); }
+
+    footer { padding-block: 2rem 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
+
+    @media (max-width: 820px) {
+      .hero .wrap, .about { grid-template-columns: 1fr; }
+      .photo { justify-self: start; order: -1; width: min(100%, 300px); }
+      .areas { grid-template-columns: 1fr; gap: 1.75rem; margin-top: 1.75rem; }
+      nav { gap: 1.1rem; }
+      .btn.ghost { margin: .6rem 0 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header>
+    <div class="wrap">
+      <a class="brand" href="#inicio">Cristina Rodríguez</a>
+      <nav aria-label="Principal">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#areas">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <div class="hero" id="inicio">
+      <div class="wrap">
+        <div>
+          <p class="role">Dietista-nutricionista, docente e investigadora</p>
+          <h1>Una nueva etapa está en camino</h1>
+          <svg class="wave" viewBox="0 0 130 18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true">
+            <path d="M2 11c8-10 16-10 24 0s16 10 24 0 16-10 24 0 16 10 24 0 16-10 24 0"/>
+          </svg>
+          <p class="lead">Estoy preparando un espacio donde compartir mis proyectos de investigación, publicaciones y colaboraciones desde Gran Canaria.</p>
+          <a class="btn" href="#contacto">Escríbeme</a>
+        </div>
+        <div class="photo">
+          <img src="images/foto-cristina.png" width="808" height="1024" alt="Cristina Rodríguez, dietista-nutricionista en Gran Canaria" fetchpriority="high">
+        </div>
+      </div>
+    </div>
+
+    <section class="band" id="sobre-mi">
+      <div class="wrap about">
+        <h2>Sobre mí</h2>
+        <div>
+          <p>Soy Cristina Rodríguez, dietista-nutricionista en Gran Canaria. Combino la docencia y la investigación en nutrición con el trabajo en proyectos de salud y alimentación.</p>
+          <p>Este sitio irá creciendo para reunir lo que voy haciendo: estudios, publicaciones y colaboraciones.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="areas">
+      <div class="wrap">
+        <h2>Qué encontrarás aquí</h2>
+        <div class="areas">
+          <article class="area">
+            <h3>Investigación</h3>
+            <p>Proyectos y líneas de trabajo en nutrición y salud.</p>
+            <span class="soon">Próximamente</span>
+          </article>
+          <article class="area">
+            <h3>Publicaciones</h3>
+            <p>Artículos y comunicaciones científicas, con enlaces para leerlos.</p>
+            <span class="soon">Próximamente</span>
+          </article>
+          <article class="area">
+            <h3>Colaboraciones</h3>
+            <p>Proyectos compartidos con otros profesionales e instituciones.</p>
+            <span class="soon">Próximamente</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band contact" id="contacto">
+      <div class="wrap">
+        <h2>Contacto</h2>
+        <p>Mientras termino la web, puedes escribirme por correo o por Instagram.</p>
+        <a class="mail" href="mailto:info@cristinarodrigueznutricion.com">info@cristinarodrigueznutricion.com</a>
+        <p class="social"><a href="https://www.instagram.com/cristinarodriguez.nutricion/" target="_blank" rel="noopener">Instagram: @cristinarodriguez.nutricion</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Cristina Rodríguez · Nutrición en Gran Canaria</span>
+    </div>
+  </footer>
+</body>
+</html>
